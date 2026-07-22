@@ -1,0 +1,78 @@
+/**
+ * Theme tokens. The application toggles `data-theme="light|dark"` on <html>.
+ * Dark is the default aesthetic; light is a clean inversion.
+ */
+
+:root {
+  /* Type */
+  --font-ui: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Radii & spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  /* Method colors (shared across themes) */
+  --method-get: #38b48b;
+  --method-post: #e8a13a;
+  --method-put: #4a8df0;
+  --method-patch: #a07bf0;
+  --method-delete: #e35d6a;
+
+  /* Status colors */
+  --status-success: #38b48b;
+  --status-redirect: #4a8df0;
+  --status-client: #e8a13a;
+  --status-server: #e35d6a;
+  --status-info: #8a8f98;
+}
+
+/* ----------------------------- Dark theme ----------------------------- */
+:root,
+[data-theme='dark'] {
+  --bg: #16181d;
+  --bg-elevated: #1d2026;
+  --bg-panel: #1a1d23;
+  --bg-input: #22252c;
+  --bg-hover: #262a31;
+  --bg-active: #2d323b;
+
+  --border: #2a2e36;
+  --border-strong: #3a3f49;
+
+  --text: #e6e8ec;
+  --text-muted: #9aa0aa;
+  --text-faint: #6b7079;
+
+  --accent: #f0a02a;
+  --accent-soft: rgba(240, 160, 42, 0.14);
+  --accent-text: #16181d;
+
+  --grid-line: rgba(255, 255, 255, 0.02);
+}
+
+/* ----------------------------- Light theme ---------------------------- */
+[data-theme='light'] {
+  --bg: #f5f4f0;
+  --bg-elevated: #ffffff;
+  --bg-panel: #faf9f6;
+  --bg-input: #ffffff;
+  --bg-hover: #efeee9;
+  --bg-active: #e7e5de;
+
+  --border: #e2e0d8;
+  --border-strong: #cfccc1;
+
+  --text: #21242a;
+  --text-muted: #6a6f78;
+  --text-faint: #9b9fa8;
+
+  --accent: #d97f12;
+  --accent-soft: rgba(217, 127, 18, 0.12);
+  --accent-text: #ffffff;
+
+  --grid-line: rgba(0, 0, 0, 0.02);
+}
